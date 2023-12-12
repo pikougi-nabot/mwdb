@@ -1,0 +1,5387 @@
+x
+x <!--
+x Table structure for `actor`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''actor'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | actor_id
+x  | actor_user
+x  | actor_name
+x |-
+x ! Type
+x  | bigint(20) unsigned
+x  | int(10) unsigned
+x  | varbinary(255)
+x |-
+x ! Null
+x  | NO
+x  | YES
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `actor`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''actor'''
+x |-
+x  ! actor_id
+x  ! actor_user
+x  ! actor_name
+x |-
+x  | 1
+x  | 1
+x  | PiKougi.nAbot
+x |-
+x  | 2
+x  | 2
+x  | MediaWiki default
+x |}
+x
+x
+x <!--
+x Table structure for `archive`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''archive'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | ar_id
+x  | ar_namespace
+x  | ar_title
+x  | ar_comment_id
+x  | ar_actor
+x  | ar_timestamp
+x  | ar_minor_edit
+x  | ar_rev_id
+x  | ar_deleted
+x  | ar_len
+x  | ar_page_id
+x  | ar_parent_id
+x  | ar_sha1
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | int(11)
+x  | varbinary(255)
+x  | bigint(20) unsigned
+x  | bigint(20) unsigned
+x  | binary(14)
+x  | tinyint(4)
+x  | int(10) unsigned
+x  | tinyint(3) unsigned
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | varbinary(32)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x  | YES
+x  | YES
+x  | NO
+x |-
+x ! Default
+x  |
+x  | 0
+x  |
+x  |
+x  |
+x  |
+x  | 0
+x  |
+x  | 0
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `archive`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''archive'''
+x |-
+x  ! ar_id
+x  ! ar_namespace
+x  ! ar_title
+x  ! ar_comment_id
+x  ! ar_actor
+x  ! ar_timestamp
+x  ! ar_minor_edit
+x  ! ar_rev_id
+x  ! ar_deleted
+x  ! ar_len
+x  ! ar_page_id
+x  ! ar_parent_id
+x  ! ar_sha1
+x |}
+x
+x
+x <!--
+x Table structure for `bot_passwords`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''bot_passwords'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | bp_user
+x  | bp_app_id
+x  | bp_password
+x  | bp_token
+x  | bp_restrictions
+x  | bp_grants
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(32)
+x  | tinyblob
+x  | binary(32)
+x  | blob
+x  | blob
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `bot_passwords`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''bot_passwords'''
+x |-
+x  ! bp_user
+x  ! bp_app_id
+x  ! bp_password
+x  ! bp_token
+x  ! bp_restrictions
+x  ! bp_grants
+x |}
+x
+x
+x <!--
+x Table structure for `category`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''category'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | cat_id
+x  | cat_title
+x  | cat_pages
+x  | cat_subcats
+x  | cat_files
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(255)
+x  | int(11)
+x  | int(11)
+x  | int(11)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  | 0
+x  | 0
+x  | 0
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `category`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''category'''
+x |-
+x  ! cat_id
+x  ! cat_title
+x  ! cat_pages
+x  ! cat_subcats
+x  ! cat_files
+x |}
+x
+x
+x <!--
+x Table structure for `categorylinks`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''categorylinks'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | cl_from
+x  | cl_to
+x  | cl_sortkey
+x  | cl_sortkey_prefix
+x  | cl_timestamp
+x  | cl_collation
+x  | cl_type
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(255)
+x  | varbinary(230)
+x  | varbinary(255)
+x  | timestamp
+x  | varbinary(32)
+x  | enum('page','subcat','file')
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  | 0
+x  |
+x  |
+x  |
+x  | current_timestamp()
+x  |
+x  | page
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x  |
+x  | on update current_timestamp()
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `categorylinks`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''categorylinks'''
+x |-
+x  ! cl_from
+x  ! cl_to
+x  ! cl_sortkey
+x  ! cl_sortkey_prefix
+x  ! cl_timestamp
+x  ! cl_collation
+x  ! cl_type
+x |}
+x
+x
+x <!--
+x Table structure for `change_tag`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''change_tag'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | ct_id
+x  | ct_rc_id
+x  | ct_log_id
+x  | ct_rev_id
+x  | ct_params
+x  | ct_tag_id
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | blob
+x  | int(10) unsigned
+x |-
+x ! Null
+x  | NO
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `change_tag`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''change_tag'''
+x |-
+x  ! ct_id
+x  ! ct_rc_id
+x  ! ct_log_id
+x  ! ct_rev_id
+x  ! ct_params
+x  ! ct_tag_id
+x |}
+x
+x
+x <!--
+x Table structure for `change_tag_def`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''change_tag_def'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | ctd_id
+x  | ctd_name
+x  | ctd_user_defined
+x  | ctd_count
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(255)
+x  | tinyint(1)
+x  | bigint(20) unsigned
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  | 0
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `change_tag_def`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''change_tag_def'''
+x |-
+x  ! ctd_id
+x  ! ctd_name
+x  ! ctd_user_defined
+x  ! ctd_count
+x |}
+x
+x
+x <!--
+x Table structure for `comment`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''comment'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | comment_id
+x  | comment_hash
+x  | comment_text
+x  | comment_data
+x |-
+x ! Type
+x  | bigint(20) unsigned
+x  | int(11)
+x  | blob
+x  | blob
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `comment`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''comment'''
+x |-
+x  ! comment_id
+x  ! comment_hash
+x  ! comment_text
+x  ! comment_data
+x |-
+x  | 1
+x  | 0
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table structure for `content`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''content'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | content_id
+x  | content_size
+x  | content_sha1
+x  | content_model
+x  | content_address
+x |-
+x ! Type
+x  | bigint(20) unsigned
+x  | int(10) unsigned
+x  | varbinary(32)
+x  | smallint(5) unsigned
+x  | varbinary(255)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `content`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''content'''
+x |-
+x  ! content_id
+x  ! content_size
+x  ! content_sha1
+x  ! content_model
+x  ! content_address
+x |-
+x  | 1
+x  | 755
+x  | 22vz5zlxa2zctewimaum2bf1due8hkl
+x  | 1
+x  | tt:1
+x |}
+x
+x
+x <!--
+x Table structure for `content_models`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''content_models'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | model_id
+x  | model_name
+x |-
+x ! Type
+x  | int(11)
+x  | varbinary(64)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `content_models`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''content_models'''
+x |-
+x  ! model_id
+x  ! model_name
+x |-
+x  | 1
+x  | wikitext
+x |}
+x
+x
+x <!--
+x Table structure for `externallinks`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''externallinks'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | el_id
+x  | el_from
+x  | el_to
+x  | el_index
+x  | el_index_60
+x  | el_to_domain_index
+x  | el_to_path
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | blob
+x  | blob
+x  | varbinary(60)
+x  | varbinary(255)
+x  | blob
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x |-
+x ! Default
+x  |
+x  | 0
+x  |
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `externallinks`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''externallinks'''
+x |-
+x  ! el_id
+x  ! el_from
+x  ! el_to
+x  ! el_index
+x  ! el_index_60
+x  ! el_to_domain_index
+x  ! el_to_path
+x |}
+x
+x
+x <!--
+x Table structure for `filearchive`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''filearchive'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | fa_id
+x  | fa_name
+x  | fa_archive_name
+x  | fa_storage_group
+x  | fa_storage_key
+x  | fa_deleted_user
+x  | fa_deleted_timestamp
+x  | fa_deleted_reason_id
+x  | fa_size
+x  | fa_width
+x  | fa_height
+x  | fa_metadata
+x  | fa_bits
+x  | fa_media_type
+x  | fa_major_mime
+x  | fa_minor_mime
+x  | fa_description_id
+x  | fa_actor
+x  | fa_timestamp
+x  | fa_deleted
+x  | fa_sha1
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(255)
+x  | varbinary(255)
+x  | varbinary(16)
+x  | varbinary(64)
+x  | int(11)
+x  | binary(14)
+x  | bigint(20) unsigned
+x  | int(10) unsigned
+x  | int(11)
+x  | int(11)
+x  | mediumblob
+x  | int(11)
+x  | enum('UNKNOWN','BITMAP','DRAWING','AUDIO','VIDEO','MULTIMEDIA','OFFICE','TEXT','EXECUTABLE','ARCHIVE','3D')
+x  | enum('unknown','application','audio','image','text','video','message','model','multipart','chemical')
+x  | varbinary(100)
+x  | bigint(20) unsigned
+x  | bigint(20) unsigned
+x  | binary(14)
+x  | tinyint(3) unsigned
+x  | varbinary(32)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | NO
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | YES
+x  | NO
+x  | NO
+x  | YES
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  | 0
+x  | 0
+x  | 0
+x  |
+x  | 0
+x  |
+x  | unknown
+x  | unknown
+x  |
+x  |
+x  |
+x  | 0
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `filearchive`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''filearchive'''
+x |-
+x  ! fa_id
+x  ! fa_name
+x  ! fa_archive_name
+x  ! fa_storage_group
+x  ! fa_storage_key
+x  ! fa_deleted_user
+x  ! fa_deleted_timestamp
+x  ! fa_deleted_reason_id
+x  ! fa_size
+x  ! fa_width
+x  ! fa_height
+x  ! fa_metadata
+x  ! fa_bits
+x  ! fa_media_type
+x  ! fa_major_mime
+x  ! fa_minor_mime
+x  ! fa_description_id
+x  ! fa_actor
+x  ! fa_timestamp
+x  ! fa_deleted
+x  ! fa_sha1
+x |}
+x
+x
+x <!--
+x Table structure for `image`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''image'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | img_name
+x  | img_size
+x  | img_width
+x  | img_height
+x  | img_metadata
+x  | img_bits
+x  | img_media_type
+x  | img_major_mime
+x  | img_minor_mime
+x  | img_description_id
+x  | img_actor
+x  | img_timestamp
+x  | img_sha1
+x |-
+x ! Type
+x  | varbinary(255)
+x  | int(10) unsigned
+x  | int(11)
+x  | int(11)
+x  | mediumblob
+x  | int(11)
+x  | enum('UNKNOWN','BITMAP','DRAWING','AUDIO','VIDEO','MULTIMEDIA','OFFICE','TEXT','EXECUTABLE','ARCHIVE','3D')
+x  | enum('unknown','application','audio','image','text','video','message','model','multipart','chemical')
+x  | varbinary(100)
+x  | bigint(20) unsigned
+x  | bigint(20) unsigned
+x  | binary(14)
+x  | varbinary(32)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  | 0
+x  | 0
+x  | 0
+x  |
+x  | 0
+x  |
+x  | unknown
+x  | unknown
+x  |
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `image`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''image'''
+x |-
+x  ! img_name
+x  ! img_size
+x  ! img_width
+x  ! img_height
+x  ! img_metadata
+x  ! img_bits
+x  ! img_media_type
+x  ! img_major_mime
+x  ! img_minor_mime
+x  ! img_description_id
+x  ! img_actor
+x  ! img_timestamp
+x  ! img_sha1
+x |}
+x
+x
+x <!--
+x Table structure for `imagelinks`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''imagelinks'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | il_from
+x  | il_to
+x  | il_from_namespace
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(255)
+x  | int(11)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  | 0
+x  |
+x  | 0
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `imagelinks`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''imagelinks'''
+x |-
+x  ! il_from
+x  ! il_to
+x  ! il_from_namespace
+x |}
+x
+x
+x <!--
+x Table structure for `interwiki`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''interwiki'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | iw_prefix
+x  | iw_url
+x  | iw_api
+x  | iw_wikiid
+x  | iw_local
+x  | iw_trans
+x |-
+x ! Type
+x  | varbinary(32)
+x  | blob
+x  | blob
+x  | varbinary(64)
+x  | tinyint(1)
+x  | tinyint(4)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x  |
+x  | 0
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `interwiki`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''interwiki'''
+x |-
+x  ! iw_prefix
+x  ! iw_url
+x  ! iw_api
+x  ! iw_wikiid
+x  ! iw_local
+x  ! iw_trans
+x |-
+x  | aa
+x  | https://aa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ab
+x  | https://ab.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ace
+x  | https://ace.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | acronym
+x  | https://www.acronymfinder.com/~/search/af.aspx?string=exact&Acronym=$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | advisory
+x  | https://advisory.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | advogato
+x  | http://www.advogato.org/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | ady
+x  | https://ady.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | af
+x  | https://af.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ak
+x  | https://ak.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | als
+x  | https://als.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | alt
+x  | https://alt.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | am
+x  | https://am.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ami
+x  | https://ami.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | an
+x  | https://an.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ang
+x  | https://ang.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | anp
+x  | https://anp.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ar
+x  | https://ar.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | arc
+x  | https://arc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | arxiv
+x  | https://www.arxiv.org/abs/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | ary
+x  | https://ary.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | arz
+x  | https://arz.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | as
+x  | https://as.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ast
+x  | https://ast.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | atj
+x  | https://atj.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | av
+x  | https://av.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | avk
+x  | https://avk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | awa
+x  | https://awa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ay
+x  | https://ay.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | az
+x  | https://az.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | azb
+x  | https://azb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | b
+x  | https://en.wikibooks.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ba
+x  | https://ba.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ban
+x  | https://ban.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bar
+x  | https://bar.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bat-smg
+x  | https://bat-smg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bbc
+x  | https://bbc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bcl
+x  | https://bcl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | be
+x  | https://be.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | be-tarask
+x  | https://be-tarask.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | be-x-old
+x  | https://be-tarask.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | betawikiversity
+x  | https://beta.wikiversity.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bg
+x  | https://bg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bh
+x  | https://bh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bi
+x  | https://bi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bjn
+x  | https://bjn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | blk
+x  | https://blk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bm
+x  | https://bm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bn
+x  | https://bn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bo
+x  | https://bo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | botwiki
+x  | https://meta.wikimedia.org/wiki/Interwiki_map/discontinued#Botwiki
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bpy
+x  | https://bpy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | br
+x  | https://br.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bs
+x  | https://bs.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | btm
+x  | https://btm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bug
+x  | https://bug.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bugzilla
+x  | https://bugzilla.wikimedia.org/show_bug.cgi?id=$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | bxr
+x  | https://bxr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | c
+x  | https://commons.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | c2find
+x  | http://c2.com/cgi/wiki?FindPage&value=$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | ca
+x  | https://ca.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cache
+x  | https://www.google.com/search?q=cache:$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | cbk-zam
+x  | https://cbk-zam.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cdo
+x  | https://cdo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ce
+x  | https://ce.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ceb
+x  | https://ceb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ch
+x  | https://ch.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | chapter
+x  | https://en.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cho
+x  | https://cho.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | chr
+x  | https://chr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | chy
+x  | https://chy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ckb
+x  | https://ckb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cmn
+x  | https://zh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | co
+x  | https://co.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | commons
+x  | https://commons.wikimedia.org/wiki/$1
+x  | https://commons.wikimedia.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | cr
+x  | https://cr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | crh
+x  | https://crh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cs
+x  | https://cs.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | csb
+x  | https://csb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cu
+x  | https://cu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cv
+x  | https://cv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cy
+x  | https://cy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | cz
+x  | https://cs.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | d
+x  | https://www.wikidata.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | da
+x  | https://da.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dag
+x  | https://dag.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dbdump
+x  | https://dumps.wikimedia.org/$1/latest/
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | de
+x  | https://de.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dga
+x  | https://dga.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dictionary
+x  | http://www.dict.org/bin/Dict?Database=*&Form=Dict1&Strategy=*&Query=$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | din
+x  | https://din.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | diq
+x  | https://diq.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dk
+x  | https://da.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | doi
+x  | https://dx.doi.org/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | donate
+x  | https://donate.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | download
+x  | https://releases.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | drumcorpswiki
+x  | http://www.drumcorpswiki.com/$1
+x  | http://drumcorpswiki.com/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | dsb
+x  | https://dsb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dty
+x  | https://dty.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dv
+x  | https://dv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | dwjwiki
+x  | http://www.suberic.net/cgi-bin/dwj/wiki.cgi?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | dz
+x  | https://dz.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ee
+x  | https://ee.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | egl
+x  | https://eml.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | el
+x  | https://el.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | elibre
+x  | http://enciclopedia.us.es/index.php/$1
+x  | http://enciclopedia.us.es/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | emacswiki
+x  | https://www.emacswiki.org/emacs/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | eml
+x  | https://eml.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | en
+x  | https://en.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | en-simple
+x  | https://simple.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | eo
+x  | https://eo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | epo
+x  | https://eo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | es
+x  | https://es.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | et
+x  | https://et.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | etherpad
+x  | https://etherpad.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | eu
+x  | https://eu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ext
+x  | https://ext.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | f
+x  | https://www.wikifunctions.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fa
+x  | https://fa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fat
+x  | https://fat.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ff
+x  | https://ff.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fi
+x  | https://fi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fiu-vro
+x  | https://fiu-vro.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fj
+x  | https://fj.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fo
+x  | https://fo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | foldoc
+x  | https://foldoc.org/?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | fon
+x  | https://fon.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | foundation
+x  | https://foundation.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | foundationsite
+x  | https://wikimediafoundation.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | foxwiki
+x  | https://fox.wikis.com/wc.dll?Wiki~$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | fr
+x  | https://fr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | freebsdman
+x  | https://www.FreeBSD.org/cgi/man.cgi?apropos=1&query=$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | freenode
+x  | https://meta.wikimedia.org/wiki/Interwiki_map/discontinued#freenode
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | frp
+x  | https://frp.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | frr
+x  | https://frr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fur
+x  | https://fur.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | fy
+x  | https://fy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ga
+x  | https://ga.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gag
+x  | https://gag.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gan
+x  | https://gan.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gcr
+x  | https://gcr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gd
+x  | https://gd.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gentoo-wiki
+x  | http://gentoo-wiki.com/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | gerrit
+x  | https://gerrit.wikimedia.org/r/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | git
+x  | https://gerrit.wikimedia.org/g/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gitlab
+x  | https://gitlab.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gl
+x  | https://gl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | glk
+x  | https://glk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gn
+x  | https://gn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gom
+x  | https://gom.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | google
+x  | https://www.google.com/search?q=$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | googlegroups
+x  | https://groups.google.com/groups?q=$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | gor
+x  | https://gor.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | got
+x  | https://got.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gpe
+x  | https://gpe.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gsw
+x  | https://als.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gu
+x  | https://gu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | guc
+x  | https://guc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gur
+x  | https://gur.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | guw
+x  | https://guw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | gv
+x  | https://gv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ha
+x  | https://ha.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hak
+x  | https://hak.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hammondwiki
+x  | http://www.dairiki.org/HammondWiki/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | haw
+x  | https://haw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | he
+x  | https://he.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hi
+x  | https://hi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hif
+x  | https://hif.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ho
+x  | https://ho.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | horizonlabs
+x  | https://horizon.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hr
+x  | https://hr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hrwiki
+x  | http://www.hrwiki.org/wiki/$1
+x  | http://www.hrwiki.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | hsb
+x  | https://hsb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ht
+x  | https://ht.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hu
+x  | https://hu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hy
+x  | https://hy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hyw
+x  | https://hyw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | hz
+x  | https://hz.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ia
+x  | https://ia.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | id
+x  | https://id.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ie
+x  | https://ie.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ig
+x  | https://ig.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ii
+x  | https://ii.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ik
+x  | https://ik.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ilo
+x  | https://ilo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | imdb
+x  | http://www.imdb.com/find?q=$1&tt=on
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | incubator
+x  | https://incubator.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | inh
+x  | https://inh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | io
+x  | https://io.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ircrc
+x  | irc://irc.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | is
+x  | https://is.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | it
+x  | https://it.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | iu
+x  | https://iu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ja
+x  | https://ja.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | jam
+x  | https://jam.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | jbo
+x  | https://jbo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | jp
+x  | https://ja.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | jv
+x  | https://jv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ka
+x  | https://ka.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kaa
+x  | https://kaa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kab
+x  | https://kab.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kbd
+x  | https://kbd.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kbp
+x  | https://kbp.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kcg
+x  | https://kcg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kg
+x  | https://kg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ki
+x  | https://ki.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kj
+x  | https://kj.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kk
+x  | https://kk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kl
+x  | https://kl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | km
+x  | https://km.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kmwiki
+x  | https://kmwiki.wikispaces.com/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | kn
+x  | https://kn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ko
+x  | https://ko.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | koi
+x  | https://koi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kr
+x  | https://kr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | krc
+x  | https://krc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ks
+x  | https://ks.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ksh
+x  | https://ksh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ku
+x  | https://ku.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kv
+x  | https://kv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | kw
+x  | https://kw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ky
+x  | https://ky.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | la
+x  | https://la.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | labsconsole
+x  | https://wikitech.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lad
+x  | https://lad.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lb
+x  | https://lb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lbe
+x  | https://lbe.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lexemes
+x  | https://www.wikidata.org/w/index.php?search=$1&ns146=1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lez
+x  | https://lez.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lfn
+x  | https://lfn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lg
+x  | https://lg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | li
+x  | https://li.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lij
+x  | https://lij.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | linuxwiki
+x  | http://linuxwiki.de/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | listarchive
+x  | https://lists.wikimedia.org/hyperkitty/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lld
+x  | https://lld.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lmo
+x  | https://lmo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ln
+x  | https://ln.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lo
+x  | https://lo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lojban
+x  | https://mw.lojban.org/papri/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | lqwiki
+x  | http://wiki.linuxquestions.org/wiki/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | lrc
+x  | https://lrc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lt
+x  | https://lt.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ltg
+x  | https://ltg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lv
+x  | https://lv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | lzh
+x  | https://zh-classical.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | m
+x  | https://meta.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mad
+x  | https://mad.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mai
+x  | https://mai.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mail
+x  | https://lists.wikimedia.org/postorius/lists/$1.lists.wikimedia.org/
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mailarchive
+x  | https://lists.wikimedia.org/pipermail/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | map-bms
+x  | https://map-bms.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mdf
+x  | https://mdf.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | meatball
+x  | http://meatballwiki.org/wiki/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | mediawikiwiki
+x  | https://www.mediawiki.org/wiki/$1
+x  | https://www.mediawiki.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | mediazilla
+x  | https://bugzilla.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | memoryalpha
+x  | http://en.memory-alpha.org/wiki/$1
+x  | http://en.memory-alpha.org/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | meta
+x  | https://meta.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | metawiki
+x  | http://sunir.org/apps/meta.pl?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | metawikimedia
+x  | https://meta.wikimedia.org/wiki/$1
+x  | https://meta.wikimedia.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | metawikipedia
+x  | https://meta.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mg
+x  | https://mg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mh
+x  | https://mh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mhr
+x  | https://mhr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mi
+x  | https://mi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | min
+x  | https://min.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mk
+x  | https://mk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ml
+x  | https://ml.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mn
+x  | https://mn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mni
+x  | https://mni.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mnw
+x  | https://mnw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mo
+x  | https://mo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mozillawiki
+x  | https://wiki.mozilla.org/$1
+x  | https://wiki.mozilla.org/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | mr
+x  | https://mr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mrj
+x  | https://mrj.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ms
+x  | https://ms.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mt
+x  | https://mt.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mus
+x  | https://mus.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mw
+x  | https://www.mediawiki.org/wiki/$1
+x  | https://www.mediawiki.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | mwl
+x  | https://mwl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | my
+x  | https://my.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | myv
+x  | https://myv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | mzn
+x  | https://mzn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | n
+x  | https://en.wikinews.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | na
+x  | https://na.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nah
+x  | https://nah.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nan
+x  | https://zh-min-nan.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nap
+x  | https://nap.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nb
+x  | https://no.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nds
+x  | https://nds.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nds-nl
+x  | https://nds-nl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ne
+x  | https://ne.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | new
+x  | https://new.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ng
+x  | https://ng.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nia
+x  | https://nia.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nl
+x  | https://nl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nn
+x  | https://nn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | no
+x  | https://no.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nost
+x  | https://nostalgia.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nostalgia
+x  | https://nostalgia.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nov
+x  | https://nov.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nqo
+x  | https://nqo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nrm
+x  | https://nrm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nso
+x  | https://nso.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | nv
+x  | https://nv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ny
+x  | https://ny.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | oc
+x  | https://oc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | oeis
+x  | https://oeis.org/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | oldwikisource
+x  | https://wikisource.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | olo
+x  | https://olo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | om
+x  | https://om.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | openwiki
+x  | http://openwiki.com/ow.asp?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | or
+x  | https://or.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | os
+x  | https://os.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | otrs
+x  | https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&TicketID=$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | otrswiki
+x  | https://vrt-wiki.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | outreach
+x  | https://outreach.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | outreachwiki
+x  | https://outreach.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pa
+x  | https://pa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pag
+x  | https://pag.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pam
+x  | https://pam.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pap
+x  | https://pap.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pcd
+x  | https://pcd.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pcm
+x  | https://pcm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pdc
+x  | https://pdc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pfl
+x  | https://pfl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | phab
+x  | https://phabricator.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | phabricator
+x  | https://phabricator.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pi
+x  | https://pi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pih
+x  | https://pih.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pl
+x  | https://pl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pmid
+x  | https://www.ncbi.nlm.nih.gov/pubmed/$1?dopt=Abstract
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | pms
+x  | https://pms.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pnb
+x  | https://pnb.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pnt
+x  | https://pnt.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | policy
+x  | https://policy.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ps
+x  | https://ps.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pt
+x  | https://pt.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pwn
+x  | https://pwn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pyrev
+x  | https://www.mediawiki.org/wiki/Special:Code/pywikipedia/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | pythoninfo
+x  | https://wiki.python.org/moin/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | q
+x  | https://en.wikiquote.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | qu
+x  | https://qu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | quality
+x  | https://quality.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rcirc
+x  | irc://irc.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rev
+x  | https://www.mediawiki.org/wiki/Special:Code/MediaWiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rfc
+x  | https://tools.ietf.org/html/rfc$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | rm
+x  | https://rm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rmy
+x  | https://rmy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rn
+x  | https://rn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ro
+x  | https://ro.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | roa-rup
+x  | https://roa-rup.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | roa-tara
+x  | https://roa-tara.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rt
+x  | https://rt.wikimedia.org/Ticket/Display.html?id=$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ru
+x  | https://ru.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rue
+x  | https://rue.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rup
+x  | https://roa-rup.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | rw
+x  | https://rw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | s
+x  | https://en.wikisource.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | s23wiki
+x  | http://s23.org/wiki/$1
+x  | http://s23.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | sa
+x  | https://sa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sah
+x  | https://sah.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sat
+x  | https://sat.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sc
+x  | https://sc.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | scn
+x  | https://scn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sco
+x  | https://sco.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sd
+x  | https://sd.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | se
+x  | https://se.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | seattlewireless
+x  | http://seattlewireless.net/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | senseislibrary
+x  | https://senseis.xmp.net/?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | sep11
+x  | https://meta.wikimedia.org/wiki/Sep11wiki
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sg
+x  | https://sg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sgs
+x  | https://bat-smg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sh
+x  | https://sh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sharemap
+x  | https://meta.wikimedia.org/w/index.php?title=Interwiki_map/discontinued#Sharemap
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | shi
+x  | https://shi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | shn
+x  | https://shn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | shoutwiki
+x  | http://www.shoutwiki.com/wiki/$1
+x  | http://www.shoutwiki.com/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | shy
+x  | https://shy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | si
+x  | https://si.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | simple
+x  | https://simple.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sk
+x  | https://sk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | skr
+x  | https://skr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sl
+x  | https://sl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sm
+x  | https://sm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | smn
+x  | https://smn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sn
+x  | https://sn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | so
+x  | https://so.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | spcom
+x  | https://spcom.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | species
+x  | https://species.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sq
+x  | https://sq.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | squeak
+x  | http://wiki.squeak.org/squeak/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | sr
+x  | https://sr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | srn
+x  | https://srn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ss
+x  | https://ss.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | st
+x  | https://st.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | stats
+x  | https://stats.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | stq
+x  | https://stq.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | strategy
+x  | https://strategy.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | su
+x  | https://su.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sulutil
+x  | https://meta.wikimedia.org/wiki/Special:CentralAuth/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sv
+x  | https://sv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | svn
+x  | https://svn.wikimedia.org/viewvc/mediawiki/$1?view=log
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | sw
+x  | https://sw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | szl
+x  | https://szl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | szy
+x  | https://szy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ta
+x  | https://ta.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tay
+x  | https://tay.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tcy
+x  | https://tcy.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | te
+x  | https://te.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tenwiki
+x  | https://ten.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | test2wiki
+x  | https://test2.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | testwiki
+x  | https://test.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | testwikidata
+x  | https://test.wikidata.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tet
+x  | https://tet.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tg
+x  | https://tg.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | th
+x  | https://th.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | theopedia
+x  | https://www.theopedia.com/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | ti
+x  | https://ti.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ticket
+x  | https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&TicketNumber=$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tk
+x  | https://tk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tl
+x  | https://tl.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tly
+x  | https://tly.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tmbw
+x  | http://www.tmbw.net/wiki/$1
+x  | http://tmbw.net/wiki/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | tmnet
+x  | http://www.technomanifestos.net/?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | tn
+x  | https://tn.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | to
+x  | https://to.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | toolhub
+x  | https://toolhub.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tpi
+x  | https://tpi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tr
+x  | https://tr.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | trv
+x  | https://trv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ts
+x  | https://ts.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tswiki
+x  | https://www.mediawiki.org/wiki/Toolserver:$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tt
+x  | https://tt.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tum
+x  | https://tum.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tw
+x  | https://tw.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | twiki
+x  | http://twiki.org/cgi-bin/view/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | ty
+x  | https://ty.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | tyv
+x  | https://tyv.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | udm
+x  | https://udm.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ug
+x  | https://ug.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | uk
+x  | https://uk.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | uncyclopedia
+x  | https://en.uncyclopedia.co/wiki/$1
+x  | https://en.uncyclopedia.co/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | unreal
+x  | https://wiki.beyondunreal.com/$1
+x  | https://wiki.beyondunreal.com/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | ur
+x  | https://ur.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | usability
+x  | https://usability.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | usemod
+x  | http://www.usemod.com/cgi-bin/wiki.pl?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | uz
+x  | https://uz.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | v
+x  | https://en.wikiversity.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | ve
+x  | https://ve.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vec
+x  | https://vec.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vep
+x  | https://vep.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vi
+x  | https://vi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vls
+x  | https://vls.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vo
+x  | https://vo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | votewiki
+x  | https://vote.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | voy
+x  | https://en.wikivoyage.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vro
+x  | https://fiu-vro.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vrts
+x  | https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&TicketID=$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | vrtwiki
+x  | https://vrt-wiki.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | w
+x  | https://en.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wa
+x  | https://wa.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | war
+x  | https://war.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wg
+x  | https://wg-en.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wiki
+x  | http://c2.com/cgi/wiki?$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikia
+x  | http://www.wikia.com/wiki/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikibooks
+x  | https://en.wikibooks.org/wiki/$1
+x  | https://en.wikibooks.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikidata
+x  | https://www.wikidata.org/wiki/$1
+x  | https://www.wikidata.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikif1
+x  | http://www.wikif1.org/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikifunctions
+x  | https://www.wikifunctions.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wikihow
+x  | https://www.wikihow.com/$1
+x  | https://www.wikihow.com/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikimania
+x  | https://wikimania.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wikimedia
+x  | https://foundation.wikimedia.org/wiki/$1
+x  | https://foundation.wikimedia.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikinews
+x  | https://en.wikinews.org/wiki/$1
+x  | https://en.wikinews.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikinfo
+x  | http://wikinfo.co/English/index.php/$1
+x  |
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikinvest
+x  | https://meta.wikimedia.org/wiki/Interwiki_map/discontinued#Wikinvest
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wikipedia
+x  | https://en.wikipedia.org/wiki/$1
+x  | https://en.wikipedia.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikipediawikipedia
+x  | https://en.wikipedia.org/wiki/Wikipedia:$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wikiquote
+x  | https://en.wikiquote.org/wiki/$1
+x  | https://en.wikiquote.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikisource
+x  | https://wikisource.org/wiki/$1
+x  | https://wikisource.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikispecies
+x  | https://species.wikimedia.org/wiki/$1
+x  | https://species.wikimedia.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikitech
+x  | https://wikitech.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wikiversity
+x  | https://en.wikiversity.org/wiki/$1
+x  | https://en.wikiversity.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikivoyage
+x  | https://en.wikivoyage.org/wiki/$1
+x  | https://en.wikivoyage.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wikt
+x  | https://en.wiktionary.org/wiki/$1
+x  | https://en.wiktionary.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wiktionary
+x  | https://en.wiktionary.org/wiki/$1
+x  | https://en.wiktionary.org/w/api.php
+x  |
+x  | 0
+x  | 0
+x |-
+x  | wm2005
+x  | https://wikimania2005.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2006
+x  | https://wikimania2006.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2007
+x  | https://wikimania2007.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2008
+x  | https://wikimania2008.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2009
+x  | https://wikimania2009.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2010
+x  | https://wikimania2010.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2011
+x  | https://wikimania2011.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2012
+x  | https://wikimania2012.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2013
+x  | https://wikimania2013.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2014
+x  | https://wikimania2014.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2015
+x  | https://wikimania2015.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2016
+x  | https://wikimania2016.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2017
+x  | https://wikimania2017.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wm2018
+x  | https://wikimania2018.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmam
+x  | https://am.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmania
+x  | https://wikimania.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmar
+x  | http://www.wikimedia.org.ar/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmau
+x  | https://wikimedia.org.au/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmbd
+x  | https://bd.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmbe
+x  | https://be.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmbr
+x  | https://br.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmca
+x  | https://ca.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmcn
+x  | https://cn.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmco
+x  | https://co.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmdk
+x  | https://dk.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmdoc
+x  | https://doc.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmec
+x  | https://ec.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmee
+x  | https://ee.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmet
+x  | https://ee.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmf
+x  | https://foundation.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmfblog
+x  | https://diff.wikimedia.org/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmfi
+x  | https://fi.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmge
+x  | https://ge.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmhi
+x  | https://hi.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmhk
+x  | https://meta.wikimedia.org/wiki/Wikimedia_Hong_Kong
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmid
+x  | https://id.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmil
+x  | http://www.wikimedia.org.il/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmke
+x  | https://meta.wikimedia.org/wiki/Wikimedia_Kenya
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmmk
+x  | https://mk.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmmx
+x  | https://mx.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmnl
+x  | https://nl.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmno
+x  | https://no.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmnyc
+x  | https://nyc.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmpa-us
+x  | https://pa-us.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmph
+x  | https://meta.wikimedia.org/wiki/Wikimedia_Philippines
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmpl
+x  | https://pl.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmpt
+x  | https://pt.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmpunjabi
+x  | https://punjabi.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmromd
+x  | https://romd.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmrs
+x  | https://rs.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmru
+x  | https://ru.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmse
+x  | https://se.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmteam
+x  | https://wikimaniateam.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmtr
+x  | https://tr.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmua
+x  | https://ua.wikimedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmuk
+x  | https://wikimedia.org.uk/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmve
+x  | https://wikimedia.org.ve/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wmza
+x  | http://wikimedia.org.za/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wo
+x  | https://wo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | wuu
+x  | https://wuu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | xal
+x  | https://xal.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | xh
+x  | https://xh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | xmf
+x  | https://xmf.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | yi
+x  | https://yi.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | yo
+x  | https://yo.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | yue
+x  | https://zh-yue.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | za
+x  | https://za.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zea
+x  | https://zea.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zgh
+x  | https://zgh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zh
+x  | https://zh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zh-classical
+x  | https://zh-classical.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zh-cn
+x  | https://zh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zh-min-nan
+x  | https://zh-min-nan.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zh-tw
+x  | https://zh.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zh-yue
+x  | https://zh-yue.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |-
+x  | zu
+x  | https://zu.wikipedia.org/wiki/$1
+x  |
+x  |
+x  | 1
+x  | 0
+x |}
+x
+x
+x <!--
+x Table structure for `ipblocks`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''ipblocks'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | ipb_id
+x  | ipb_address
+x  | ipb_user
+x  | ipb_by_actor
+x  | ipb_reason_id
+x  | ipb_timestamp
+x  | ipb_auto
+x  | ipb_anon_only
+x  | ipb_create_account
+x  | ipb_enable_autoblock
+x  | ipb_expiry
+x  | ipb_range_start
+x  | ipb_range_end
+x  | ipb_deleted
+x  | ipb_block_email
+x  | ipb_allow_usertalk
+x  | ipb_parent_block_id
+x  | ipb_sitewide
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | tinyblob
+x  | int(10) unsigned
+x  | bigint(20) unsigned
+x  | bigint(20) unsigned
+x  | binary(14)
+x  | tinyint(1)
+x  | tinyint(1)
+x  | tinyint(1)
+x  | tinyint(1)
+x  | varbinary(14)
+x  | tinyblob
+x  | tinyblob
+x  | tinyint(1)
+x  | tinyint(1)
+x  | tinyint(1)
+x  | int(10) unsigned
+x  | tinyint(1)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  | 0
+x  |
+x  |
+x  |
+x  | 0
+x  | 0
+x  | 1
+x  | 1
+x  |
+x  |
+x  |
+x  | 0
+x  | 0
+x  | 0
+x  |
+x  | 1
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `ipblocks`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''ipblocks'''
+x |-
+x  ! ipb_id
+x  ! ipb_address
+x  ! ipb_user
+x  ! ipb_by_actor
+x  ! ipb_reason_id
+x  ! ipb_timestamp
+x  ! ipb_auto
+x  ! ipb_anon_only
+x  ! ipb_create_account
+x  ! ipb_enable_autoblock
+x  ! ipb_expiry
+x  ! ipb_range_start
+x  ! ipb_range_end
+x  ! ipb_deleted
+x  ! ipb_block_email
+x  ! ipb_allow_usertalk
+x  ! ipb_parent_block_id
+x  ! ipb_sitewide
+x |}
+x
+x
+x <!--
+x Table structure for `ipblocks_restrictions`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''ipblocks_restrictions'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | ir_ipb_id
+x  | ir_type
+x  | ir_value
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | tinyint(4)
+x  | int(10) unsigned
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `ipblocks_restrictions`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''ipblocks_restrictions'''
+x |-
+x  ! ir_ipb_id
+x  ! ir_type
+x  ! ir_value
+x |}
+x
+x
+x <!--
+x Table structure for `ip_changes`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''ip_changes'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | ipc_rev_id
+x  | ipc_rev_timestamp
+x  | ipc_hex
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | binary(14)
+x  | varbinary(35)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  | 0
+x  |
+x  |
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `ip_changes`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''ip_changes'''
+x |-
+x  ! ipc_rev_id
+x  ! ipc_rev_timestamp
+x  ! ipc_hex
+x |}
+x
+x
+x <!--
+x Table structure for `iwlinks`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''iwlinks'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | iwl_from
+x  | iwl_prefix
+x  | iwl_title
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(32)
+x  | varbinary(255)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x |-
+x ! Default
+x  | 0
+x  |
+x  |
+x |-
+x ! Extra
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `iwlinks`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''iwlinks'''
+x |-
+x  ! iwl_from
+x  ! iwl_prefix
+x  ! iwl_title
+x |}
+x
+x
+x <!--
+x Table structure for `job`
+x -->
+x
+x {| class="wikitable" style="text-align:center;"
+x |+'''job'''
+x |- style="background:#ffdead;"
+x ! style="background:#ffffff" |
+x  | job_id
+x  | job_cmd
+x  | job_namespace
+x  | job_title
+x  | job_timestamp
+x  | job_params
+x  | job_random
+x  | job_attempts
+x  | job_token
+x  | job_token_timestamp
+x  | job_sha1
+x |-
+x ! Type
+x  | int(10) unsigned
+x  | varbinary(60)
+x  | int(11)
+x  | varbinary(255)
+x  | binary(14)
+x  | mediumblob
+x  | int(10) unsigned
+x  | int(10) unsigned
+x  | varbinary(32)
+x  | binary(14)
+x  | varbinary(32)
+x |-
+x ! Null
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x  | NO
+x  | NO
+x  | NO
+x  | NO
+x  | YES
+x  | NO
+x |-
+x ! Default
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  | 0
+x  | 0
+x  |
+x  |
+x  |
+x |-
+x ! Extra
+x  | auto_increment
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x  |
+x |}
+x
+x
+x <!--
+x Table data for `job`
+x -->
+x
+x {| class="wikitable sortable" style="text-align:center;"
+x |+'''job'''
+x |-
+x  ! job_id
+x  ! job_cmd
+x  ! job_namespace
+x  ! job_title
+x  ! job_timestamp
+x  ! job_params
+x  ! job_random
+x  ! job_attempts
+x  ! job_token
+x  ! job_token_timestamp
+x  ! job_sha1
+x |}
+x
